@@ -1,0 +1,20 @@
+1. Run this command in mysql to creeate a database named finhack
+CREATE DATABASE finhack;
+
+2. Run the following command in mysql to create the table properly (change tbname as needed):
+CREATE TABLE test
+(
+    type VARCHAR(15),
+    number INT unsigned,
+    date DATE,
+    abstract LONGTEXT,
+    title TEXT,
+    kind VARCHAR(10),
+    simple_abstract LONGTEXT
+);
+
+3. Run the following line in mysql to import test.tsv into the table just created(change file directory, dbname and tablename as needed):
+LOAD DATA LOCAL INFILE '/Users/davidbhan/Desktop/test1120600.tsv' INTO TABLE finhack.test LINES TERMINATED BY '\n'; 
+
+4. Test example abstract:
+An athletic shoe that reduces stress to the ankles with elastic banding and cushioned insoles.
